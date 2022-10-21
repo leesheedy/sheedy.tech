@@ -1120,10 +1120,36 @@ during high-volume rushes whilst working in a team<br>
 
             <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
 
-            <button class="form-btn" href="mailto:leesheedy123@gmail.com" type="button" enabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
+            <script defer src="script.js"></script>
+            <style>
+              body {
+                position: relative;
+  width: 100%;
+  background: var(--border-gradient-onyx);
+  color: var(--orange-yellow-crayola);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 20px;
+  border-radius: 14px;
+  font-size: var(--fs-6);
+  text-transform: capitalize;
+  box-shadow: var(--shadow-3);
+  z-index: 1;
+  transition: var(--transition-1);
+              }
+          
+              #evil-button {
+                position: absolute;
+                white-space: nowrap;
+                font-size: 2rem;
+              }
+            </style>
+          </head>
+          <body>
+            <button id="evil-button">Send Message</button>
+          </body>
 
           </form>
 
