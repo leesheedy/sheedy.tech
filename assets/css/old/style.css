@@ -152,6 +152,7 @@ article {
   padding: 15px;
   box-shadow: var(--shadow-1);
   z-index: 1;
+  float: left;
 }
 
 .separator {
@@ -298,6 +299,9 @@ main {
   max-height: 112px;
   overflow: hidden;
   transition: var(--transition-2);
+}
+.sidebar-container {
+  float: left;
 }
 
 .sidebar.active { max-height: 405px; }
@@ -1851,11 +1855,9 @@ textarea.form-input::-webkit-resizer { display: none; }
     margin-bottom: 0;
     padding-top: 60px;
     z-index: 1;
-    float: left;
   }
 
   .sidebar-info { flex-direction: column; }
-  
 
   .avatar-box img { width: 150px; }
 
@@ -1904,8 +1906,4 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 img {
   border-radius: 50%;
-}
-
-.sidebar-container {
-    float: left;
 }

@@ -1,0 +1,324 @@
+<!-- Currently Not Active -->
+<!-- Also , When wanting to use add the following: 
+
+in line 140 , 
+ <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Projects</button>
+          </li> (Youll need to make it link too /projects)
+
+
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lee Sheedy's Personal Site - Projects</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+ 
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<html>
+  <head>
+    <title>Projects</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    
+  </head>
+  <body>
+    
+<main>
+    <div class="layout-container">
+        <div class="sidebar-container">
+
+        <aside class="sidebar" data-sidebar>
+            <div class="sidebar-info">
+                <figure class="avatar-box">
+                    <img src="./assets/images/my-avatar.png" alt="Avatar" width="80">
+                </figure>
+                <div class="info-content">
+                    <h1 class="name" title="Avatar">Lee Sheedy</h1>
+                    <p class="title">IT Specialist</p>
+                    <a class="app-aware-link  profile-rail-card__profile-link t-16 t-black t-bold tap-target" href="https://www.linkedin.com/in/leesheedy?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAADqEnkMBvjfn0Jn-wSzedRXABVofOv0qHlg" data-test-app-aware-link="">
+                        <div class="single-line-truncate t-16 t-black t-bold mt2">
+                            <center>View full profile</center>
+                        </div>
+                    </a>
+                </div>
+                <button class="info_more-btn" data-sidebar-btn>
+                    <span>Show Contacts</span>
+                    <ion-icon name="chevron-down"></ion-icon>
+                </button>
+            </div>
+            <div class="sidebar-info_more">
+                <div class="separator"></div>
+                <ul class="contacts-list">
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="mail-outline"></ion-icon>
+                        </div>
+                        <div class="contact-info">
+                            <p class="contact-title">Email</p>
+                            <a href="mailto:leesheedy123@gmail.com" class="contact-link">lee@sheedy.tech</a>
+                        </div>
+                    </li>
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </div>
+                        <div class="contact-info">
+                            <p class="contact-title">Location</p>
+                            <address>Albury, NSW</address>
+                        </div>
+                    </li>
+                </ul>
+                <div class="separator"></div>
+                <ul class="social-list"></ul>
+            </div>
+        
+        </div>
+        <div class="projects-container">
+
+        <div class="project-container">
+            <h1 class="h2 center">My Projects</h1>
+            
+            <div class="project-grid">
+
+
+                <div class="content-card">
+                    <a href="link_to_project_1">
+                        <img src="image_for_project_1.jpg" alt="Project 1">
+                    </a>
+                    <h2 class="h2">Project 1 Title</h2>
+                    <p>Project 1 description...</p>
+                </div>
+    
+                <div class="content-card">
+                    <a href="link_to_project_2">
+                        <img src="image_for_project_2.jpg" alt="Project 2">
+                    </a>
+                    <h2 class="h2">Project 2 Title</h2>
+                    <p>Project 2 description...</p>
+                </div>
+    
+                <div class="content-card">
+                    <a href="link_to_project_3">
+                        <img src="image_for_project_3.jpg" alt="Project 3">
+                    </a>
+                    <h2 class="h2">Project 3 Title</h2>
+                    <p>Project 3 description...</p>
+                </div>
+    
+                <div class="content-card">
+                    <a href="link_to_project_4">
+                        <img src="image_for_project_4.jpg" alt="Project 4">
+                    </a>
+                    <h2 class="h2">Project 4 Title</h2>
+                    <p>Project 4 description...</p>
+                </div>
+    
+                <div class="content-card">
+                    <a href="link_to_project_5">
+                        <img src="image_for_project_5.jpg" alt="Project 5">
+                    </a>
+                    <h2 class="h2">Project 5 Title</h2>
+                    <p>Project 5 description...</p>
+                </div>
+    
+            </div>
+        </div>
+    
+        </div>
+    </div>
+</main>
+
+  
+    <script>
+    'use strict';
+
+
+
+// element toggle function
+const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
+
+
+
+// sidebar variables
+const sidebar = document.querySelector("[data-sidebar]");
+const sidebarBtn = document.querySelector("[data-sidebar-btn]");
+
+// sidebar toggle functionality for mobile
+sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
+
+
+
+// testimonials variables
+const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
+const modalContainer = document.querySelector("[data-modal-container]");
+const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
+const overlay = document.querySelector("[data-overlay]");
+
+// modal variable
+const modalImg = document.querySelector("[data-modal-img]");
+const modalTitle = document.querySelector("[data-modal-title]");
+const modalText = document.querySelector("[data-modal-text]");
+
+// modal toggle function
+const testimonialsModalFunc = function () {
+  modalContainer.classList.toggle("active");
+  overlay.classList.toggle("active");
+}
+
+// add click event to all modal items
+for (let i = 0; i < testimonialsItem.length; i++) {
+
+  testimonialsItem[i].addEventListener("click", function () {
+
+    modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
+    modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
+    modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
+    modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
+
+    testimonialsModalFunc();
+
+  });
+
+}
+
+// add click event to modal close button
+modalCloseBtn.addEventListener("click", testimonialsModalFunc);
+overlay.addEventListener("click", testimonialsModalFunc);
+
+
+
+// custom select variables
+const select = document.querySelector("[data-select]");
+const selectItems = document.querySelectorAll("[data-select-item]");
+const selectValue = document.querySelector("[data-selecct-value]");
+const filterBtn = document.querySelectorAll("[data-filter-btn]");
+
+select.addEventListener("click", function () { elementToggleFunc(this); });
+
+// add event in all select items
+for (let i = 0; i < selectItems.length; i++) {
+  selectItems[i].addEventListener("click", function () {
+
+    let selectedValue = this.innerText.toLowerCase();
+    selectValue.innerText = this.innerText;
+    elementToggleFunc(select);
+    filterFunc(selectedValue);
+
+  });
+}
+
+// filter variables
+const filterItems = document.querySelectorAll("[data-filter-item]");
+
+const filterFunc = function (selectedValue) {
+
+  for (let i = 0; i < filterItems.length; i++) {
+
+    if (selectedValue === "all") {
+      filterItems[i].classList.add("active");
+    } else if (selectedValue === filterItems[i].dataset.category) {
+      filterItems[i].classList.add("active");
+    } else {
+      filterItems[i].classList.remove("active");
+    }
+
+  }
+
+}
+
+// add event in all filter button items for large screen
+let lastClickedBtn = filterBtn[0];
+
+for (let i = 0; i < filterBtn.length; i++) {
+
+  filterBtn[i].addEventListener("click", function () {
+
+    let selectedValue = this.innerText.toLowerCase();
+    selectValue.innerText = this.innerText;
+    filterFunc(selectedValue);
+
+    lastClickedBtn.classList.remove("active");
+    this.classList.add("active");
+    lastClickedBtn = this;
+
+  });
+
+}
+
+
+
+// contact form variables
+const form = document.querySelector("[data-form]");
+const formInputs = document.querySelectorAll("[data-form-input]");
+const formBtn = document.querySelector("[data-form-btn]");
+
+// add event to all form input field
+for (let i = 0; i < formInputs.length; i++) {
+  formInputs[i].addEventListener("input", function () {
+
+    // check form validation
+    if (form.checkValidity()) {
+      formBtn.removeAttribute("disabled");
+    } else {
+      formBtn.setAttribute("disabled", "");
+    }
+
+  });
+}
+
+
+
+// page navigation variables
+const navigationLinks = document.querySelectorAll("[data-nav-link]");
+const pages = document.querySelectorAll("[data-page]");
+
+// add event to all nav link
+for (let i = 0; i < navigationLinks.length; i++) {
+  navigationLinks[i].addEventListener("click", function () {
+
+    for (let i = 0; i < pages.length; i++) {
+      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
+        pages[i].classList.add("active");
+        navigationLinks[i].classList.add("active");
+        window.scrollTo(0, 0);
+      } else {
+        pages[i].classList.remove("active");
+        navigationLinks[i].classList.remove("active");
+      }
+    }
+
+  });
+}
+// button 
+
+const btn =
+document.querySelector("evil-button")
+let positon = 0;
+btn.addEventListener("mouseover", () => {
+  positon = positon === 0 ? 150 : 0;
+  btn.style.transform =
+  'translate(${position}px)'
+})
+    </script>
+</body>
+
+</html>
